@@ -45,10 +45,11 @@ import {
       const sftp = new Client();
       try {
         const fileName = path.basename(filePath);
+        const uploadPath = [config.sftp_uploadDir, fileName].join('/');
         log.info(MSG_UPLOADING + fileName);
         await sftp.connect(sftpOptions);
-        await sftp.fastPut(filePath, [config.sftp_uploadDir, fileName].join('/'));
-        log.info(clc.green(MSG_UPLOAD_SUCCESS + fileName));
+        await sftp.fastPut(filePath, uploadPath);
+        log.info(clc.green(MSG_UPLOAD_SUCCESS + uploadPath));
       } catch (err) {
         log.error(clc.red(err.message));
       } finally {
