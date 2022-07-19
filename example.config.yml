@@ -1,0 +1,5 @@
+sftp_host: example.com
+sftp_username: root
+sftp_password: pass
+sftp_uploadDir: /opt/server/cstrike/addons/amxmodx/plugins
+compileDir: C:\Users\MYPC\Desktop\workplace\compiled
