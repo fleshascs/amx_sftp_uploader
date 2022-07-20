@@ -10,7 +10,6 @@ jobs:
         uses: actions/setup-node@v2
       - run: npm ci
       - run: npm run build:release
-      - uses: actions/checkout@master
       - name: Archive Release
         uses: thedoctor0/zip-release@main
         with:
