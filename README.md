@@ -15,3 +15,11 @@ npm run build && npm run build:linux
 # for windows
 npm run build && npm run build:windows
 ```
+
+## config.yml
+
+| Output name   | Description                   |
+| ------------- | ----------------------------- |
+| sftp_host     | your server ip or domain name |
+| sftp_username | your server username          |
+| sftp_password | your server password          |
