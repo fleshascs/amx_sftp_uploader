@@ -9,9 +9,9 @@ npm install -g pkg
 ```
 
 ```shell script
-// for linux
+# for linux
 npm run build && npm run build:linux
 
-// for windows
+# for windows
 npm run build && npm run build:windows
 ```
