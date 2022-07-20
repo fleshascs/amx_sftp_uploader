@@ -21,6 +21,7 @@ yarn-error.log*
 /server
 
 server.exe
+fastupload.exe
 /compiled
 makeFile
 config.yml

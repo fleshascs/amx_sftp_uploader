@@ -1,0 +1,25 @@
+name: Create Archive
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+      - run: npm ci
+      - run: npm run build:release
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@main
+        with:
+          type: 'zip'
+          filename: 'fastupload.zip'
+          exclusions: '*.git* /*node_modules/* .editorconfig'
+          directory: 'dist'
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'fastupload.zip'
+          token: ${{ secrets.GITHUB_TOKEN }}
