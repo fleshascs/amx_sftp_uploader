@@ -38,7 +38,7 @@ import {
     watch(config.compileDir, { recursive: true }, handleWatch);
 
     function handleWatch(evt: 'update' | 'remove', filePath: string) {
-      if (evt === 'update') handleUpload(filePath);
+      if (evt === 'update' && path.extname(filePath) === '.amxx') handleUpload(filePath);
     }
 
     async function handleUpload(filePath: string) {
