@@ -17,7 +17,7 @@ jobs:
           type: 'zip'
           filename: 'fastupload.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
-          directory: 'dist'
+          directory: './dist'
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
