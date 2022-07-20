@@ -18,8 +18,10 @@ npm run build && npm run build:windows
 
 ## config.yml
 
-| Output name   | Description                   |
-| ------------- | ----------------------------- |
-| sftp_host     | your server ip or domain name |
-| sftp_username | your server username          |
-| sftp_password | your server password          |
+| Property name  | Description                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------- |
+| sftp_host      | your server ip or domain name                                                                                         |
+| sftp_username  | your server username                                                                                                  |
+| sftp_password  | your server password                                                                                                  |
+| sftp_uploadDir | directory where files will be uploaded                                                                                |
+| compileDir     | your local dir which will be watched for any changes, created new/changed files will be uploaded to your defined host |
