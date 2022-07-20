@@ -11,14 +11,20 @@ jobs:
       - run: npm ci
       - run: npm run build:release
       - uses: actions/checkout@master
+        with:
+          name: my-artifact
+          path: dist
       - name: Archive Release
         uses: thedoctor0/zip-release@main
         with:
+          name: my-artifact
           type: 'zip'
+          directory: './dist'
           filename: 'fastupload.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
+          tag: 'v1'
           artifacts: 'fastupload.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
