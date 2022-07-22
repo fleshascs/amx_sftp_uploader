@@ -2,7 +2,7 @@
 
 ## What is this?
 
-A tool to help automate .amxx file upload to your server. We watch your compilation directory ("compiled") for newly created/updated .amxx file changes and upload then to your server.
+A tool to help automate .amxx file upload to your server. We watch your compilation directory ("compiled") for newly created/updated .amxx files and upload them to your server.
 
 ## How can use it?
 
